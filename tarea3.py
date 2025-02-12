@@ -7,7 +7,7 @@ def main(page: ft.Page):
     page.spacing = 0  
     page.window.resizable = False 
     page.update()
-    page.bgcolor = ft.colors.GREY_300  # Simula el fondo de una barra de estado
+    page.bgcolor = ft.colors.GREY_300  
 
     # Elementos de la barra de notificaciones
     puntitos = ft.Text("····", size=30, weight=ft.FontWeight.BOLD, color="white")
@@ -73,7 +73,7 @@ def main(page: ft.Page):
             spacing=0
         ),
         bgcolor="#20C997", 
-        padding=ft.padding.only(top=0, right=10, bottom=10, left=10) ,  # Espaciado interno opcional
+        padding=ft.padding.only(top=0, right=10, bottom=10, left=10) ,
     )
 
     #body
@@ -86,28 +86,14 @@ def main(page: ft.Page):
 
     textInput = ft.TextField(label="Search people or tags", bgcolor="white", border_width=0, prefix_icon=ft.Icon(ft.Icons.SEARCH))
 
-    textoCard1 = ft.Text("Popular Now", color="black")
-    textoCard2 = ft.Text("On the Rise", color="black")
-
-    iconoCard1 = ft.Icon(name =ft.icons.STAR_HALF_ROUNDED, size=60, color="yellow")
-    iconoCard2 = ft.Icon(name = ft.icons.ARROW_UPWARD_OUTLINED, size=60, color="blue")
-
-    acciones = ft.Container(
-        content= ft.Column(
-            controls= [
-                ft.Container(content=iconoCard1),
-                ft.Container(content=textoCard1)
-            ]
-        )
-    )
 
     card_style = {
-        "width": 160,  # Ancho de cada tarjeta
-        "height": 90,  # Alto de cada tarjeta
-        "bgcolor": "white",  # Fondo blanco
-        "border_radius": 5,  # Bordes redondeados
-        "padding": 0,  # Espaciado interno
-        "alignment": ft.alignment.center  # Alinear contenido al centro
+        "width": 160, 
+        "height": 90, 
+        "bgcolor": "white",  
+        "border_radius": 5,  
+        "padding": 0,  
+        "alignment": ft.alignment.center  
     }
 
     # Tarjeta 1: "Popular Now"
@@ -141,8 +127,7 @@ def main(page: ft.Page):
     # Contenedor principal con las tarjetas en una fila
     card_row = ft.Row(
         controls=[card1, card2],
-      #  alignment=ft.MainAxisAlignment.SPACE_BETWEEN,
-        spacing=1,  # Espacio entre las tarjetas
+        spacing=1, 
     )
 
     acciones = ft.Container(content=card_row, padding=0)
@@ -150,25 +135,25 @@ def main(page: ft.Page):
 
     imagen = ft.Image(
         src="https://cdn-icons-png.flaticon.com/512/12355/12355749.png",
-        width=60,  # Ajustar tamaño
+        width=60, 
         height=60
     )
 
     imagen2 = ft.Image(
         src="https://cdn-icons-png.flaticon.com/512/6381/6381807.png",
-        width=60,  # Ajustar tamaño
+        width=60, 
         height=60
     )
 
     imagen3 = ft.Image(
         src="https://cdn-icons-png.flaticon.com/512/3529/3529417.png",
-        width=60,  # Ajustar tamaño
+        width=60,  
         height=60
     )
 
     imagen4 = ft.Image(
         src="https://cdn-icons-png.flaticon.com/512/14705/14705555.png",
-        width=60,  # Ajustar tamaño
+        width=60, 
         height=60
     )
 
